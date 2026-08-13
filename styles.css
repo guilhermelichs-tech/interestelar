@@ -26,7 +26,7 @@ nav a:hover { color: var(--lime); }
 
 .hero { min-height: 780px; height: 100svh; background: radial-gradient(circle at 76% 48%, #073a78 0, #092543 27%, var(--ink) 62%); color: #fff; position: relative; display: grid; grid-template-columns: 1.08fr .92fr; padding: 150px 7vw 70px; overflow: hidden; }
 .hero::before { content: ""; position: absolute; inset: 0; opacity: .22; background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 55px 55px; mask-image: linear-gradient(to right, transparent 20%, #000); }
-.hero::after { content: "☢"; position: absolute; right: -4vw; bottom: -17vw; font: 700 42vw/1 sans-serif; color: rgba(217,255,69,.025); transform: rotate(-12deg); pointer-events: none; }
+.hero::after { content: ""; position: absolute; right: -12vw; bottom: -20vw; width: 48vw; height: 48vw; border: 1px solid rgba(22,140,255,.06); border-radius: 50%; box-shadow: 0 0 0 7vw rgba(22,140,255,.025), 0 0 0 14vw rgba(22,140,255,.015); pointer-events: none; }
 .hero-copy { align-self: center; position: relative; z-index: 2; }
 .eyebrow, .section-kicker { font: 600 11px/1 "Space Grotesk"; letter-spacing: .18em; display: flex; align-items: center; gap: 12px; }
 .eyebrow { color: rgba(255,255,255,.62); }
@@ -47,10 +47,10 @@ h1 em, .journey h2 em { color: var(--lime); font-style: normal; }
 .logo-halo { position: absolute; width: 470px; height: 470px; border-radius: 50%; background: radial-gradient(circle, rgba(0,125,255,.38), rgba(0,125,255,.08) 45%, transparent 70%); filter: blur(8px); }
 .official-logo { position: relative; z-index: 2; width: 235px; height: 235px; object-fit: cover; border-radius: 50%; filter: drop-shadow(0 20px 35px rgba(0,0,0,.55)); border: 2px solid rgba(217,255,69,.55); }
 .team-orbit-line { position: absolute; z-index: 1; left: 50%; top: 50%; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; transform-style: preserve-3d; animation: orbitSpin 16s linear infinite; }
-.orbit-a { width: 610px; height: 330px; margin: -165px 0 0 -305px; transform: rotate(-18deg); animation-duration: 17s; }
-.orbit-b { width: 550px; height: 470px; margin: -235px 0 0 -275px; transform: rotate(24deg); animation-duration: 21s; animation-direction: reverse; }
-.orbit-c { width: 410px; height: 590px; margin: -295px 0 0 -205px; transform: rotate(61deg); animation-duration: 25s; }
-.orbit-d { width: 390px; height: 390px; margin: -195px 0 0 -195px; transform: rotate(-42deg); animation-duration: 13s; animation-direction: reverse; }
+.orbit-a { width: 720px; height: 390px; margin: -195px 0 0 -360px; transform: rotate(-18deg); animation-duration: 17s; }
+.orbit-b { width: 650px; height: 550px; margin: -275px 0 0 -325px; transform: rotate(24deg); animation-duration: 21s; animation-direction: reverse; }
+.orbit-c { width: 500px; height: 680px; margin: -340px 0 0 -250px; transform: rotate(61deg); animation-duration: 25s; }
+.orbit-d { width: 470px; height: 470px; margin: -235px 0 0 -235px; transform: rotate(-42deg); animation-duration: 13s; animation-direction: reverse; }
 .orbit-team { position: absolute; left: -39px; top: 50%; width: 78px; height: 78px; margin-top: -39px; border-radius: 50%; overflow: hidden; border: 3px solid currentColor; background: #050b13; box-shadow: 0 0 27px currentColor; animation: counterSpin 16s linear infinite; }
 .orbit-team img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
 .orbit-nova { color: #138bff; width: 94px; height: 94px; left: -47px; margin-top: -47px; }.orbit-fusion { color: #75e51b; }.orbit-atomix { color: #ff2633; }.orbit-nexus { color: #ffb817; }
@@ -84,6 +84,10 @@ h1 em, .journey h2 em { color: var(--lime); font-style: normal; }
 .manifesto { margin-top: 100px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 34px 0; display: flex; justify-content: space-between; gap: 30px; align-items: center; }
 .manifesto p { font: 500 clamp(21px,2.3vw,34px)/1.35 "Space Grotesk"; max-width: 1000px; margin: 0; }.manifesto span { color: var(--blue); font-size: 34px; }
 
+.nova-feature { min-height: 720px; background: radial-gradient(circle at 76% 50%, rgba(22,140,255,.3), transparent 28%), #081728; color: #fff; display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 8vw; overflow: hidden; }
+.nova-feature .section-kicker { margin-bottom: 55px; }.nova-label { color: #4ca5ff; font: 700 10px "Space Grotesk"; letter-spacing: .2em; }.nova-feature h2 { font-size: clamp(55px,7vw,105px); }.nova-feature h2 em { color: #168cff; font-style: normal; }.nova-feature-copy > p:not(.nova-label) { max-width: 590px; color: rgba(255,255,255,.62); font-size: 17px; line-height: 1.7; }.nova-feature-copy strong { color: #fff; }
+.nova-feature-art { position: relative; min-height: 520px; display: grid; place-items: center; }.nova-feature-art img { position: relative; z-index: 2; width: min(90%, 520px); filter: drop-shadow(0 0 35px rgba(22,140,255,.42)); }.nova-feature-art > span { position: absolute; bottom: 20px; color: rgba(255,255,255,.45); font: 700 9px "Space Grotesk"; letter-spacing: .24em; }.nova-pulse { position: absolute; width: 360px; height: 360px; border: 1px solid rgba(22,140,255,.3); border-radius: 50%; box-shadow: 0 0 0 65px rgba(22,140,255,.06), 0 0 0 130px rgba(22,140,255,.025); animation: novaPulse 2.8s ease-in-out infinite; } @keyframes novaPulse { 50% { transform: scale(1.07); opacity: .72; } }
+
 .journey { background-color: var(--ink); color: #fff; position: relative; overflow: hidden; background-image: linear-gradient(rgba(7,17,31,.96),rgba(7,17,31,.96)), repeating-linear-gradient(45deg, transparent 0 26px, rgba(217,255,69,.12) 26px 28px); }
 .journey::after { content: "RADIOACTIVE · NOVA-X · RADIOACTIVE · NOVA-X"; position: absolute; right: -140px; top: 100px; transform: rotate(90deg); transform-origin: center; color: rgba(217,255,69,.18); font: 700 9px "Space Grotesk"; letter-spacing: .42em; white-space: nowrap; }
 .journey-head { display: grid; grid-template-columns: 1.2fr .8fr; gap: 9vw; align-items: end; }.journey h2 { font-size: clamp(58px,7.5vw,112px); }.journey-head p { color: rgba(255,255,255,.55); font-size: 18px; line-height: 1.65; max-width: 480px; }
@@ -114,9 +118,11 @@ footer { background: var(--ink); color: white; display: flex; align-items: cente
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }.reveal { opacity: 1; transform: none; transition: none; }.team-orbit-line, .orbit-team, .final-orbit, .team-dot { animation: none; } }
 @media (max-width: 900px) {
+  .nova-feature { grid-template-columns: 1fr; }
   .site-header nav, .header-cta { display: none; }.hero { height: auto; min-height: 900px; grid-template-columns: 1fr; padding-top: 140px; }.hero-visual { min-height: 480px; margin-top: 20px; }.official-logo { max-width: 470px; }.nova-seal { right: 10%; }.hero-copy { align-self: end; }.intro-grid, .journey-head, .challenges-head, .teams { grid-template-columns: 1fr; }.section-kicker { margin-bottom: 50px; }.intro-copy { margin-top: 45px; }.journey-head p { margin-top: 35px; }.challenges-head p { margin-top: 30px; }.challenge-grid { grid-template-columns: 1fr 1fr; }.challenge-card, .challenge-card:nth-child(4) { grid-column: auto; }.challenge-card:last-child { grid-column: 1 / -1; }.teams { padding-top: 110px; }.team-orbit { margin-top: 30px; }
 }
 @media (max-width: 580px) {
+  .nova-feature-art { min-height: 380px; }.nova-feature-art img { width: 330px; }.nova-pulse { width: 250px; height: 250px; }
   .nuclear-badge { left: -7px; top: 2%; transform: scale(.82); }
   .site-header { height: 75px; }.hero { padding: 115px 6vw 45px; min-height: 900px; }.hero h1 { font-size: 54px; }.hero-lead { font-size: 16px; }.hero-actions { align-items: flex-start; flex-direction: column; }.hero-visual { min-height: 360px; margin: 10px 0 0; transform: scale(.72); }.official-logo { width: 210px; height: 210px; }.logo-halo { width: 330px; height: 330px; }.nova-seal { width: 90px; height: 90px; right: -35px; bottom: 0; }.nova-seal img { width: 56px; height: 56px; }.scroll-note { display:none; }.section { padding: 85px 6vw; }.intro h2, .challenges h2, .teams h2, .journey h2 { font-size: 47px; }.intro-copy { font-size: 17px; }.manifesto { margin-top: 65px; }.challenge-grid { grid-template-columns: 1fr; }.challenge-card, .challenge-card:nth-child(4), .challenge-card:last-child { grid-column: auto; min-height: 260px; }.timeline article { grid-template-columns: 55px 1fr; }.team-orbit { transform: scale(.7); margin: -30px -90px; }.teams { min-height: 900px; } footer { flex-direction: column; align-items: flex-start; gap: 25px; }
 }
