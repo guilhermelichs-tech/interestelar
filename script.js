@@ -16,7 +16,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   window.addEventListener('scroll', () => {
     const offset = window.scrollY;
     const visual = document.querySelector('.hero-visual');
-    if (visual && offset < window.innerHeight) {
+    if (visual && offset < window.innerHeight && window.innerWidth > 580) {
       visual.style.transform = `translateY(${offset * 0.08}px)`;
     }
   }, { passive: true });
