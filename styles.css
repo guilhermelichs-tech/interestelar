@@ -51,7 +51,7 @@ h1 em, .journey h2 em { color: var(--lime); font-style: normal; }
 .orbit-c { width: 330px; height: 500px; margin: -250px 0 0 -165px; transform: rotate(61deg); animation-duration: 25s; }
 .orbit-d { width: 310px; height: 310px; margin: -155px 0 0 -155px; transform: rotate(-42deg); animation-duration: 13s; animation-direction: reverse; }
 .orbit-team { position: absolute; left: -39px; top: 50%; width: 78px; height: 78px; margin-top: -39px; border-radius: 50%; overflow: hidden; border: 3px solid currentColor; background: #050b13; box-shadow: 0 0 27px currentColor; animation: counterSpin 16s linear infinite; }
-.orbit-team img { width: 100%; height: 100%; object-fit: cover; }
+.orbit-team img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
 .orbit-nova { color: #138bff; width: 94px; height: 94px; left: -47px; margin-top: -47px; }.orbit-fusion { color: #75e51b; }.orbit-atomix { color: #ff2633; }.orbit-nexus { color: #ffb817; }
 .orbit-b .orbit-team { animation-duration: 21s; animation-direction: reverse; }.orbit-c .orbit-team { animation-duration: 25s; }.orbit-d .orbit-team { animation-duration: 13s; animation-direction: reverse; }
 @keyframes orbitSpin { to { rotate: 360deg; } }
@@ -101,14 +101,14 @@ h1 em, .journey h2 em { color: var(--lime); font-style: normal; }
 .teams { background-color: #142132; background-image: radial-gradient(circle at 75% 50%, rgba(8,124,255,.15), transparent 32%), radial-gradient(circle at 75% 50%, transparent 0 250px, rgba(217,255,69,.045) 251px 253px, transparent 254px); color: #fff; display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; min-height: 720px; overflow: hidden; }.teams-copy p { margin-top: 32px; color: rgba(255,255,255,.58); font-size: 18px; line-height: 1.65; max-width: 530px; }
 .team-orbit { min-height: 540px; position: relative; }.rings { position: absolute; inset: 50%; transform: translate(-50%,-50%); width: 430px; height: 430px; border: 1px solid rgba(255,255,255,.15); border-radius: 50%; box-shadow: 0 0 0 70px rgba(255,255,255,.025), 0 0 0 140px rgba(255,255,255,.02); }
 .final-core { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%,-50%); width: 180px; height: 180px; display: grid; place-content: center; text-align: center; border-radius: 50%; background: #087cff; color: #fff; font: 700 22px/1 "Space Grotesk"; box-shadow: 0 0 70px rgba(8,124,255,.42); }.final-core small { font-size: 10px; letter-spacing: .12em; line-height: 1.4; margin-top: 7px; }
-.team-dot { position: absolute; width: 94px; height: 94px; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 3px; font: 700 8px "Space Grotesk"; letter-spacing: .1em; color: white; border: 2px solid rgba(255,255,255,.5); box-shadow: 0 10px 30px rgba(0,0,0,.25); overflow: hidden; }.team-dot img { width: 64px; height: 55px; object-fit: cover; border-radius: 50%; }.dot-one { background: #087cff; top: 6%; left: 44%; box-shadow: 0 0 35px rgba(8,124,255,.55); }.dot-two { background: #d91523; top: 41%; right: 3%; }.dot-three { background: #e5a411; bottom: 2%; left: 42%; }.dot-four { background: #55a90e; top: 41%; left: 2%; }
+.team-dot { position: absolute; width: 94px; height: 94px; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1px; font: 700 8px "Space Grotesk"; letter-spacing: .1em; color: white; border: 2px solid rgba(255,255,255,.5); box-shadow: 0 10px 30px rgba(0,0,0,.25); overflow: hidden; }.team-dot img { width: 72px; height: 66px; object-fit: contain; }.dot-one { background: #087cff; top: 6%; left: 44%; box-shadow: 0 0 35px rgba(8,124,255,.55); }.dot-two { background: #d91523; top: 41%; right: 3%; }.dot-three { background: #e5a411; bottom: 2%; left: 42%; }.dot-four { background: #55a90e; top: 41%; left: 2%; }
 .team-dot { cursor: zoom-in; transition: transform .25s ease, box-shadow .25s ease; }.team-dot:hover { transform: scale(1.14); z-index: 8; box-shadow: 0 0 42px currentColor; }
 body::before { content: ""; position: fixed; z-index: 30; inset: 0; pointer-events: none; opacity: 0; background-color: rgba(3,9,16,.84); background-position: center; background-repeat: no-repeat; background-size: min(72vh, 680px); backdrop-filter: blur(9px); transition: opacity .28s ease; }
 body:has(.team-dot:hover)::before { opacity: 1; }
-body:has(.dot-one:hover)::before { background-image: url("nova-x-crop.png"); }
-body:has(.dot-two:hover)::before { background-image: url("atomix-crop.png"); }
-body:has(.dot-three:hover)::before { background-image: url("nexus-crop.png"); }
-body:has(.dot-four:hover)::before { background-image: url("fusion-crop.png"); }
+body:has(.dot-one:hover)::before { background-image: url("nova-x-emblem.png"); }
+body:has(.dot-two:hover)::before { background-image: url("atomix-emblem.png"); }
+body:has(.dot-three:hover)::before { background-image: url("nexus-emblem.png"); }
+body:has(.dot-four:hover)::before { background-image: url("fusion-emblem.png"); }
 
 footer { background: var(--ink); color: white; display: flex; align-items: center; justify-content: space-between; padding: 45px 7vw; border-top: 1px solid rgba(255,255,255,.12); } footer p { font-size: 11px; line-height: 1.6; color: rgba(255,255,255,.45); } footer > a:last-child { font-size: 12px; color: var(--lime); }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }.reveal.visible { opacity: 1; transform: none; }
