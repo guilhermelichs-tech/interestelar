@@ -38,6 +38,7 @@ h1 em, .journey h2 em { color: var(--lime); font-style: normal; }
 .journey h2 em { color: #2698ff; text-shadow: 0 0 14px rgba(38,152,255,.48), 0 0 34px rgba(38,152,255,.22); }
 .hero-lead { color: rgba(255,255,255,.72); font-size: 19px; max-width: 520px; line-height: 1.6; }
 .hero-actions { display: flex; gap: 28px; align-items: center; margin-top: 40px; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 10px; }.button-donation { background: #168cff; color: #fff; box-shadow: 0 0 0 1px rgba(89,180,255,.32), 0 10px 30px rgba(22,140,255,.18); transition: transform .2s, box-shadow .2s; }.button-donation:hover { transform: translateY(-3px); box-shadow: 0 0 0 1px rgba(118,197,255,.55), 0 14px 36px rgba(22,140,255,.32); }
 .button { display: inline-flex; align-items: center; gap: 28px; border-radius: 50px; padding: 16px 22px; font-size: 13px; font-weight: 700; }
 .button-primary { background: var(--lime); color: var(--ink); transition: transform .2s, box-shadow .2s; }
 .button-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 35px rgba(217,255,69,.2); }
@@ -132,6 +133,7 @@ footer { background: #04101f; color: white; display: flex; align-items: center; 
   .site-header nav, .header-cta { display: none; }.hero { height: auto; min-height: 900px; grid-template-columns: 1fr; padding-top: 140px; }.hero-visual { min-height: 480px; margin-top: 20px; }.official-logo { max-width: 470px; }.nova-seal { right: 10%; }.hero-copy { align-self: end; }.intro-grid, .journey-head, .challenges-head, .teams { grid-template-columns: 1fr; }.section-kicker { margin-bottom: 50px; }.intro-copy { margin-top: 45px; }.journey-head p { margin-top: 35px; }.challenges-head p { margin-top: 30px; }.challenge-grid { grid-template-columns: 1fr 1fr; }.challenge-card, .challenge-card:nth-child(4) { grid-column: auto; }.challenge-card:last-child { grid-column: 1 / -1; }.teams { padding-top: 110px; }.team-orbit { margin-top: 30px; }
 }
 @media (max-width: 580px) {
+  .hero-buttons { flex-direction: column; width: 100%; }.hero-buttons .button { justify-content: space-between; width: 100%; }
   .class-photo { min-height: 390px; }.class-copy { padding: 70px 6vw; }
   .donate-card,.raffle-card { grid-template-columns: 1fr; padding: 70px 25px 28px; }.qr-placeholder,.raffle-symbol { width: 155px; height: 155px; margin: auto; }.raffle-details { grid-template-columns: 1fr; }.impact-numbers article { grid-template-columns: 1fr; }.impact-numbers span { padding: 8px 0 0; }
   .nova-feature-art { min-height: 380px; }.nova-feature-art img { width: 330px; }.nova-pulse { width: 250px; height: 250px; }
