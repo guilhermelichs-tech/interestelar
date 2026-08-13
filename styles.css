@@ -35,6 +35,7 @@ h1, h2 { font-family: "Space Grotesk", sans-serif; margin: 0; letter-spacing: -.
 h1 { font-size: clamp(68px, 8.4vw, 132px); margin: 35px 0; }
 h1 em, .journey h2 em { color: var(--lime); font-style: normal; }
 .hero h1 em { color: var(--lime); text-shadow: 0 0 14px rgba(217,255,69,.55), 0 0 36px rgba(217,255,69,.28); }
+.journey h2 em { color: #2698ff; text-shadow: 0 0 14px rgba(38,152,255,.48), 0 0 34px rgba(38,152,255,.22); }
 .hero-lead { color: rgba(255,255,255,.72); font-size: 19px; max-width: 520px; line-height: 1.6; }
 .hero-actions { display: flex; gap: 28px; align-items: center; margin-top: 40px; }
 .button { display: inline-flex; align-items: center; gap: 28px; border-radius: 50px; padding: 16px 22px; font-size: 13px; font-weight: 700; }
@@ -102,7 +103,8 @@ h1 em, .journey h2 em { color: var(--lime); font-style: normal; }
 .challenge-card { min-height: 315px; padding: 25px; border-radius: 4px; position: relative; display: flex; flex-direction: column; grid-column: span 2; transition: transform .25s; overflow: hidden; }
 .challenge-card:nth-child(4) { grid-column: 2 / span 2; }.challenge-card:hover { transform: translateY(-7px); }
 .card-cultural { background: #8fc9ff; color: #061321; }.card-logic { background: #168cff; color: #fff; }.card-knowledge { background: #071b33; color: #fff; }.card-sport { background: #cce7ff; color: #0b2844; }.card-sport-two { background: #174f89; color: #fff; }
-.card-index { font: 700 10px "Space Grotesk"; opacity: .6; }.card-icon { margin: auto; font-size: 55px; font-family: "Space Grotesk"; }.challenge-card h3 { margin: 0 0 8px; font: 600 23px "Space Grotesk"; }.challenge-card p { margin: 0; font-size: 13px; line-height: 1.5; max-width: 220px; opacity: .72; }.card-arrow { position: absolute; right: 24px; bottom: 24px; }
+.card-index { font: 700 10px "Space Grotesk"; opacity: .6; }.card-icon { margin: auto; width: 76px; height: 76px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; background: rgba(255,255,255,.12); }.card-icon svg { width: 48px; height: 48px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }.challenge-card h3 { margin: 0 0 8px; font: 600 23px "Space Grotesk"; }.challenge-card p { margin: 0; font-size: 13px; line-height: 1.5; max-width: 220px; opacity: .72; }.card-arrow { position: absolute; right: 24px; bottom: 24px; }
+.challenge-card:hover .card-icon { transform: rotate(-5deg) scale(1.08); box-shadow: 0 0 25px rgba(255,255,255,.2); }.card-icon { transition: transform .25s ease, box-shadow .25s ease; }
 
 .teams { background-color: #07172c; background-image: radial-gradient(circle at 75% 50%, rgba(22,140,255,.25), transparent 34%), linear-gradient(135deg, #07172c, #0b2b4c 58%, #071a32), radial-gradient(circle at 75% 50%, transparent 0 250px, rgba(96,180,255,.1) 251px 253px, transparent 254px); color: #fff; display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; min-height: 720px; overflow: hidden; }.teams-copy p { margin-top: 32px; color: rgba(220,239,255,.68); font-size: 18px; line-height: 1.65; max-width: 530px; }
 .team-orbit { min-height: 540px; position: relative; }.rings { position: absolute; inset: 50%; transform: translate(-50%,-50%); width: 430px; height: 430px; border: 1px solid rgba(255,255,255,.15); border-radius: 50%; box-shadow: 0 0 0 70px rgba(255,255,255,.025), 0 0 0 140px rgba(255,255,255,.02); }
