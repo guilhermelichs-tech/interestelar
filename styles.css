@@ -34,7 +34,7 @@ nav a:hover { color: var(--lime); }
 h1, h2 { font-family: "Space Grotesk", sans-serif; margin: 0; letter-spacing: -.055em; line-height: .92; }
 h1 { font-size: clamp(68px, 8.4vw, 132px); margin: 35px 0; }
 h1 em, .journey h2 em { color: var(--lime); font-style: normal; }
-.hero h1 em { color: #168cff; text-shadow: 0 0 28px rgba(22,140,255,.28); }
+.hero h1 em { color: var(--lime); text-shadow: 0 0 14px rgba(217,255,69,.55), 0 0 36px rgba(217,255,69,.28); }
 .hero-lead { color: rgba(255,255,255,.72); font-size: 19px; max-width: 520px; line-height: 1.6; }
 .hero-actions { display: flex; gap: 28px; align-items: center; margin-top: 40px; }
 .button { display: inline-flex; align-items: center; gap: 28px; border-radius: 50px; padding: 16px 22px; font-size: 13px; font-weight: 700; }
