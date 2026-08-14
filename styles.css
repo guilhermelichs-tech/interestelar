@@ -92,7 +92,7 @@ h1 em, .journey h2 em { color: var(--lime); font-style: normal; }
 
 .journey { background-color: #06172b; color: #fff; position: relative; overflow: hidden; background-image: radial-gradient(circle at 82% 22%, rgba(22,140,255,.2), transparent 28%), linear-gradient(rgba(6,23,43,.95),rgba(5,16,34,.98)), repeating-linear-gradient(45deg, transparent 0 26px, rgba(80,169,255,.14) 26px 28px); }
 .journey::after { content: "NOVA-X · ENERGIA AZUL · NOVA-X · ENERGIA AZUL"; position: absolute; right: -155px; top: 100px; transform: rotate(90deg); transform-origin: center; color: rgba(80,169,255,.24); font: 700 9px "Space Grotesk"; letter-spacing: .42em; white-space: nowrap; }
-.journey-head { display: grid; grid-template-columns: 1.2fr .8fr; gap: 9vw; align-items: end; }.journey h2 { font-size: clamp(58px,7.5vw,112px); }.journey-head p { color: rgba(255,255,255,.55); font-size: 18px; line-height: 1.65; max-width: 480px; }
+.journey-head { display: grid; grid-template-columns: 1.2fr .8fr; gap: 9vw; align-items: end; }.journey h2 { font-size: clamp(58px,7.5vw,112px); }.journey h2 em { display: block; white-space: nowrap; }.journey-head p { color: rgba(255,255,255,.55); font-size: 18px; line-height: 1.65; max-width: 480px; }
 .timeline { margin-top: 90px; border-top: 1px solid rgba(255,255,255,.18); }
 .timeline article { display: grid; grid-template-columns: 90px 1fr; border-bottom: 1px solid rgba(255,255,255,.18); padding: 34px 0; transition: padding .25s, background .25s; }
 .timeline article:hover { padding-left: 18px; background: linear-gradient(90deg, rgba(22,140,255,.12), transparent); }
@@ -153,4 +153,5 @@ footer { background: #04101f; color: white; display: flex; align-items: center; 
   .orbit-d { width: 340px; height: 340px; margin: -170px 0 0 -170px; }
   .orbit-team { width: 58px; height: 58px; left: -29px; margin-top: -29px; border-width: 2px; }
   .orbit-nova { width: 68px; height: 68px; left: -34px; margin-top: -34px; }
+  .journey h2 em { font-size: .78em; }
 }
