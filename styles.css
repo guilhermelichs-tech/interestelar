@@ -8,7 +8,6 @@
   --violet: #a36cff;
   --line: rgba(7, 17, 31, .15);
 }
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: "DM Sans", sans-serif; overflow-x: hidden; }
@@ -143,4 +142,15 @@ footer { background: #04101f; color: white; display: flex; align-items: center; 
   .nova-feature-art { min-height: 390px; }.nova-team-photo { height: 360px; }.nova-photo-emblem { width: 105px; height: 105px; right: -8px; bottom: 12px; }.nova-feature-art > span { left: 16px; bottom: 25px; letter-spacing: .13em; }
   .nuclear-badge { left: -7px; top: 2%; transform: scale(.82); }
   .site-header { height: 75px; }.hero { padding: 115px 6vw 45px; min-height: 900px; }.hero h1 { font-size: 54px; }.hero-lead { font-size: 16px; }.hero-actions { align-items: flex-start; flex-direction: column; }.hero-visual { min-height: 360px; margin: 10px 0 0; transform: scale(.72); }.official-logo { width: 210px; height: 210px; }.logo-halo { width: 330px; height: 330px; }.nova-seal { width: 90px; height: 90px; right: -35px; bottom: 0; }.nova-seal img { width: 56px; height: 56px; }.scroll-note { display:none; }.section { padding: 85px 6vw; }.intro h2, .challenges h2, .teams h2, .journey h2 { font-size: 47px; }.intro-copy { font-size: 17px; }.manifesto { margin-top: 65px; }.challenge-grid { grid-template-columns: 1fr; }.challenge-card, .challenge-card:nth-child(4), .challenge-card:last-child { grid-column: auto; min-height: 285px; }.dance-pop { width: 145px; top: 14px; right: 14px; }.timeline article { grid-template-columns: 55px 1fr; }.team-orbit { transform: scale(.7); margin: -30px -90px; }.teams { min-height: 900px; }.foods-heading { margin-bottom: 42px; }.foods-list { grid-template-columns: 1fr; }.foods-list div { min-height: 88px; padding: 20px; } footer { flex-direction: column; align-items: flex-start; gap: 25px; }
+}
+@media (max-width: 580px) {
+  .hero-visual { min-height: 410px; transform: none; width: 100%; }
+  .official-logo { width: 245px; height: 245px; }
+  .logo-halo { width: 350px; height: 350px; }
+  .orbit-a { width: 430px; height: 250px; margin: -125px 0 0 -215px; }
+  .orbit-b { width: 390px; height: 330px; margin: -165px 0 0 -195px; }
+  .orbit-c { width: 305px; height: 410px; margin: -205px 0 0 -152.5px; }
+  .orbit-d { width: 340px; height: 340px; margin: -170px 0 0 -170px; }
+  .orbit-team { width: 58px; height: 58px; left: -29px; margin-top: -29px; border-width: 2px; }
+  .orbit-nova { width: 68px; height: 68px; left: -34px; margin-top: -34px; }
 }
