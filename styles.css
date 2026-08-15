@@ -169,7 +169,7 @@ footer { background: #04101f; color: white; display: flex; align-items: center; 
   .qr-code-inner img { width: 326px; left: -80px; top: -215px; }
 }
 
-.orbit-team { cursor: pointer; pointer-events: auto; transition: transform .28s ease, box-shadow .28s ease; }
+.orbit-team { cursor: pointer; pointer-events: auto; transition: scale .28s ease, box-shadow .28s ease; }
 .orbit-team:focus-visible { outline: 3px solid #fff; outline-offset: 5px; }
-.orbit-team.is-expanded { z-index: 25; transform: scale(1.7); background: #02070d; box-shadow: 0 0 18px #fff, 0 0 55px currentColor; }
+.orbit-team.is-expanded { z-index: 25; scale: 1.7; background: #02070d; box-shadow: 0 0 18px #fff, 0 0 55px currentColor; }
 .team-orbit-line.is-paused, .team-orbit-line.is-paused .orbit-team { animation-play-state: paused; }
