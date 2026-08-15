@@ -160,3 +160,7 @@ footer { background: #04101f; color: white; display: flex; align-items: center; 
   .impact-numbers .basket-stat { padding-left: 0; border-left: 0; }
   .impact-arrow { justify-self: center; }
 }
+
+/* Faz o branco da imagem se integrar ao fundo azul do quadro. */
+.qr-code-inner { background: transparent; border-color: transparent; }
+.qr-code-inner img { mix-blend-mode: multiply; }
