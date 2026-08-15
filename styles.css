@@ -162,5 +162,9 @@ footer { background: #04101f; color: white; display: flex; align-items: center; 
 }
 
 /* QR branco sobre o cartão azul, inspirado no visual enviado. */
-.qr-code-inner { background: transparent; border-color: transparent; }
-.qr-code-inner img { filter: invert(1); mix-blend-mode: screen; }
+.qr-code-inner { width: 192px; height: 192px; background: transparent; border-color: transparent; }
+.qr-code-inner img { width: 393px; left: -97px; top: -259px; filter: invert(1); mix-blend-mode: screen; }
+@media (max-width: 580px) {
+  .qr-code-inner { width: 159px; height: 159px; }
+  .qr-code-inner img { width: 326px; left: -80px; top: -215px; }
+}
