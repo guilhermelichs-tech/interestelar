@@ -29,7 +29,6 @@ const closeOrbitTeams = (except = null) => {
     if (team === except) return;
     team.classList.remove('is-expanded');
     team.setAttribute('aria-expanded', 'false');
-    team.closest('.team-orbit-line')?.classList.remove('is-paused');
   });
 };
 
@@ -46,7 +45,6 @@ orbitTeams.forEach((team) => {
     closeOrbitTeams(team);
     team.classList.toggle('is-expanded', willExpand);
     team.setAttribute('aria-expanded', String(willExpand));
-    team.closest('.team-orbit-line')?.classList.toggle('is-paused', willExpand);
   };
 
   team.addEventListener('click', toggleTeam);
