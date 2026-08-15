@@ -21,3 +21,44 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     }
   }, { passive: true });
 }
+
+const orbitTeams = document.querySelectorAll('.orbit-team');
+
+const closeOrbitTeams = (except = null) => {
+  orbitTeams.forEach((team) => {
+    if (team === except) return;
+    team.classList.remove('is-expanded');
+    team.setAttribute('aria-expanded', 'false');
+    team.closest('.team-orbit-line')?.classList.remove('is-paused');
+  });
+};
+
+orbitTeams.forEach((team) => {
+  const teamName = team.querySelector('img')?.alt || 'time';
+  team.setAttribute('role', 'button');
+  team.setAttribute('tabindex', '0');
+  team.setAttribute('aria-label', `Ampliar logo do time ${teamName}`);
+  team.setAttribute('aria-expanded', 'false');
+
+  const toggleTeam = (event) => {
+    event.stopPropagation();
+    const willExpand = !team.classList.contains('is-expanded');
+    closeOrbitTeams(team);
+    team.classList.toggle('is-expanded', willExpand);
+    team.setAttribute('aria-expanded', String(willExpand));
+    team.closest('.team-orbit-line')?.classList.toggle('is-paused', willExpand);
+  };
+
+  team.addEventListener('click', toggleTeam);
+  team.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleTeam(event);
+    }
+  });
+});
+
+document.addEventListener('click', () => closeOrbitTeams());
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeOrbitTeams();
+});
