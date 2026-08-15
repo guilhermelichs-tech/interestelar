@@ -161,6 +161,6 @@ footer { background: #04101f; color: white; display: flex; align-items: center; 
   .impact-arrow { justify-self: center; }
 }
 
-/* Faz o branco da imagem se integrar ao fundo azul do quadro. */
+/* QR branco sobre o cartão azul, inspirado no visual enviado. */
 .qr-code-inner { background: transparent; border-color: transparent; }
-.qr-code-inner img { mix-blend-mode: multiply; }
+.qr-code-inner img { filter: invert(1); mix-blend-mode: screen; }
