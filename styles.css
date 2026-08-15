@@ -163,11 +163,18 @@ footer { background: #04101f; color: white; display: flex; align-items: center; 
 
 /* QR branco sobre o cartão azul, inspirado no visual enviado. */
 .qr-code-frame { justify-self: center; margin-inline: auto; }
-.qr-code-inner { width: 192px; height: 192px; background: transparent; border-color: transparent; }
-.qr-code-inner img { width: 393px; left: -97px; top: -259px; filter: invert(1); mix-blend-mode: screen; }
+.qr-code-inner { width: 192px; height: 192px; background: #fff; border: 0; }
+.qr-code-inner img { position: static; display: block; width: 100%; height: 100%; max-width: none; object-fit: contain; filter: none; mix-blend-mode: normal; transform: none; }
+.pix-key-row { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.pix-key-row strong { flex: 1; min-width: 0; }
+.copy-pix-button { flex: 0 0 auto; border: 1px solid rgba(255,255,255,.65); border-radius: 999px; padding: 8px 13px; background: #fff; color: #0757b8; font: 700 10px "Space Grotesk"; letter-spacing: .04em; cursor: pointer; transition: transform .2s ease, background .2s ease; }
+.copy-pix-button:hover { transform: translateY(-1px); background: #e7f4ff; }
+.copy-pix-button.copied { background: #071b33; border-color: #071b33; color: #fff; }
 @media (max-width: 580px) {
   .qr-code-inner { width: 159px; height: 159px; }
-  .qr-code-inner img { width: 326px; left: -80px; top: -215px; }
+  .qr-code-inner img { width: 100%; height: 100%; }
+  .pix-key-row { align-items: flex-start; }
+  .copy-pix-button { padding: 8px 12px; }
 }
 
 .orbit-team { cursor: pointer; pointer-events: auto; transition: width .28s ease, height .28s ease, left .28s ease, margin-top .28s ease, box-shadow .28s ease; }

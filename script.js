@@ -60,3 +60,22 @@ document.addEventListener('click', () => closeOrbitTeams());
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeOrbitTeams();
 });
+
+const copyPixButton = document.querySelector('.copy-pix-button');
+
+copyPixButton?.addEventListener('click', async () => {
+  const pixKey = copyPixButton.dataset.pix;
+  if (!pixKey) return;
+
+  try {
+    await navigator.clipboard.writeText(pixKey);
+    copyPixButton.textContent = 'Copiado!';
+    copyPixButton.classList.add('copied');
+    window.setTimeout(() => {
+      copyPixButton.textContent = 'Copiar';
+      copyPixButton.classList.remove('copied');
+    }, 2200);
+  } catch {
+    copyPixButton.textContent = 'Selecione a chave';
+  }
+});
