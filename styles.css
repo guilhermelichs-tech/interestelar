@@ -168,6 +168,11 @@ footer { background: #04101f; color: white; display: flex; align-items: center; 
 .qr-code-inner img { position: static; display: block; width: 100%; height: 100%; max-width: none; object-fit: contain; filter: none; mix-blend-mode: normal; transform: none; }
 .pix-key-row { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
 .pix-key-row strong { flex: 1; min-width: 0; }
+.pix-solidarity { margin: 18px 0 12px; padding: 15px 16px; border: 1px solid rgba(255,255,255,.42); border-radius: 10px; background: rgba(3,35,77,.18); box-shadow: inset 0 0 24px rgba(255,255,255,.06); }
+.pix-solidarity small { display: block; margin-bottom: 7px; color: rgba(255,255,255,.72); font: 700 8px "Space Grotesk"; letter-spacing: .16em; }
+.pix-solidarity strong { display: block; color: #fff; font: 700 17px/1.25 "Space Grotesk"; }
+.pix-solidarity strong span { color: #d9efff; }
+.pix-solidarity p { margin: 6px 0 0; color: rgba(255,255,255,.72); font-size: 11px; line-height: 1.45; }
 .copy-pix-button { flex: 0 0 auto; border: 1px solid rgba(255,255,255,.65); border-radius: 999px; padding: 8px 13px; background: #fff; color: #0757b8; font: 700 10px "Space Grotesk"; letter-spacing: .04em; cursor: pointer; transition: transform .2s ease, background .2s ease; }
 .copy-pix-button:hover { transform: translateY(-1px); background: #e7f4ff; }
 .copy-pix-button.copied { background: #071b33; border-color: #071b33; color: #fff; }
@@ -184,3 +189,4 @@ footer { background: #04101f; color: white; display: flex; align-items: center; 
 @media (max-width: 580px) {
   .orbit-team.is-expanded { width: 116px; height: 116px; left: -58px; margin-top: -58px; }
 }
+
